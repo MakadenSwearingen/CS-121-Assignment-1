@@ -21,7 +21,8 @@ def computeWordFrequencies(tokens):
         else: # If the token is not in the dictionary, add it as a key with a frequency count of 1.
             word_frequencies[token] = 1
 
-    word_frequencies = dict(sorted(word_frequencies.items(), key=lambda item: item[1], reverse=True))
+    # Sort the word frequencies dictionary by frequency in descending order. If there are ties, order them alphabetically.
+    word_frequencies = dict(sorted(word_frequencies.items(), key=lambda item: (-item[1], item[0])))
     return word_frequencies
 
 # printFrequencies(frequencies) takes a dictionary of word frequencies and prints each word and its frequency in the format "word: frequency".
