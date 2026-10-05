@@ -6,7 +6,7 @@ def tokenize(text_file_path):
     with open(text_file_path, 'r') as file:
         text = file.read()
         unhyphenated_text = text.replace('-', ' ') # Space instead of hyphen to separate words that are hyphenated.
-        unpunctuated_text = ''.join(char for char in unhyphenated_text if char.isascii() and (char.isalnum() or char.isspace())) # Creates a list of characters from unhyphenated_text that are alphanumeric (ONLY ASCII CHARACTERS) or whitespace, then joins them back together into a string.
+        unpunctuated_text = ''.join(char for char in unhyphenated_text if char.isascii() and (char.isalnum() or char.isspace())) # Creates a list of characters from unhyphenated_text that are alphanumeric or whitespace (ONLY ASCII CHARACTERS), then joins them back together into a string.
         casefolded_text = unpunctuated_text.casefold()  # Convert text to lowercase for case-insensitive comparison.
         tokenized_text = casefolded_text.split() # Split the casefolded text into tokens (words) based on whitespace.
         return tokenized_text
