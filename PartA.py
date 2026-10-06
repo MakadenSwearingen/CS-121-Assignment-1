@@ -1,4 +1,4 @@
-import sys
+import sys # For accepting terminal arguments.
 
 # tokenize(text_file) takes a file provided from an argument, reads the text, strips punctuation, then returns a list of tokens (words) from the text.
 # Runtime complexity should be O(n) as the function's work relies on the number of characters in the text file.

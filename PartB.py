@@ -1,5 +1,5 @@
 import PartA
-import sys
+import sys # For accepting terminal arguments.
 
 # commonTokens(tokens1, tokens2) takes two lists of tokens and returns a list of tokens that are common to both lists (no duplicates).
 # Runtime complexity should be O(n*m) as the function's work relies on the number of tokens in both lists.
