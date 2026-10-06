@@ -9,6 +9,7 @@ def commonTokens(tokens1, tokens2):
         if token in tokens2: # If any token in 'tokens1' is also in 'tokens2', check if we've added that token to the list.
             if token not in common_tokens: # If it's not in the list, add it to the list. Otherwise, skip it to avoid duplicates.
                 common_tokens.append(token)
+    common_tokens.sort() # Sort the list of common tokens alphabetically.
     return common_tokens
 
 # printCommonTokens(common_tokens) takes a list of common tokens and prints each token in the list. It also prints the number of common tokens in the list.
