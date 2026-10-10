@@ -3,7 +3,7 @@ import sys # For accepting terminal arguments.
 # tokenize(text_file) takes a file provided from an argument, reads the text, strips punctuation, then returns a list of tokens (words) from the text.
 # Runtime complexity should be O(n) as the function's work relies on the number of characters in the text file.
 def tokenize(text_file_path):
-    with open(text_file_path, 'r', encoding='utf-8', errors='ignore'):
+    with open(text_file_path, 'r', encoding='utf-8', errors='ignore') as file:
         text = file.read()
         unhyphenated_text = text.replace('-', ' ') # Space instead of hyphen to separate words that are hyphenated. The canvas example shows 'driver-partner' and 'driver' sharing the word 'driver'.
         unpunctuated_text = ''.join(char for char in unhyphenated_text if char.isascii() and (char.isalnum() or char.isspace())) # Creates a list of characters from unhyphenated_text that are alphanumeric or whitespace (ONLY ASCII CHARACTERS), then joins them back together into a string.
